@@ -1,0 +1,371 @@
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f0f2f5;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.3s ease; 
+    }
+    
+    body.dark-mode {
+      background-color: #121212;
+    }
+    
+    .App {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #ffffff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    
+    .App.dark-mode {
+      background-color: #333;
+      color: #fff;
+    }
+    
+    .App-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; 
+      margin-bottom: 20px;
+    }
+    
+    .App-icon {
+      width: 32px;
+      height: 32px;
+      margin-right: 10px;
+    }
+    
+    h1 {
+      color: #333;
+      margin: 0;
+    }
+    
+    .App.dark-mode h1 {
+      color: #fff;
+    }
+    
+    h2 {
+      color: #333;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #007bff;
+      padding-bottom: 5px;
+    }
+    
+    .App.dark-mode h2 {
+      color: #fff;
+      border-bottom: 2px solid #ff9800;
+    }
+    
+    form {
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      transition: background-color 0.3s ease;
+    }
+    
+    .App.dark-mode form {
+      background-color: #444;
+    }
+    
+    label {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    
+    input[type="text"],
+    textarea,
+    select,
+    input[type="datetime-local"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+      background-color: #ffffff;
+      box-sizing: border-box;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .App.dark-mode input[type="text"],
+    .App.dark-mode textarea,
+    .App.dark-mode select,
+    .App.dark-mode input[type="datetime-local"] {
+      background-color: #555;
+      color: #fff;
+      border: 1px solid #888;
+    }
+    
+    input[type="text"]:focus,
+    textarea:focus,
+    select:focus,
+    input[type="datetime-local"]:focus {
+      border-color: #007bff;
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+    
+    .App.dark-mode input[type="text"]:focus,
+    .App.dark-mode textarea:focus,
+    .App.dark-mode select:focus,
+    .App.dark-mode input[type="datetime-local"]:focus {
+      border-color: #ff9800;
+      box-shadow: 0 0 5px rgba(255, 152, 0, 0.5);
+    }
+    
+    input[type="datetime-local"]::placeholder {
+      color: #888;
+      font-style: italic;
+      opacity: 1;
+    }
+    
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 10px;
+      align-self: flex-end;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    
+    button:hover {
+      background-color: #0056b3;
+      transform: scale(1.05);
+    }
+    
+    .App.dark-mode button {
+      background-color: #ff9800;
+    }
+    
+    .App.dark-mode button:hover {
+      background-color: #e68900;
+    }
+    
+    .dark-mode-toggle {
+      padding: 5px 10px; 
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px; 
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    
+    .dark-mode-toggle:hover {
+      background-color: #0056b3;
+      transform: scale(1.05);
+    }
+    
+    .App.dark-mode .dark-mode-toggle {
+      background-color: #ff9800;
+    }
+    
+    .App.dark-mode .dark-mode-toggle:hover {
+      background-color: #e68900;
+    }
+    
+    .note-item {
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 10px;
+      border-radius: 4px;
+      background-color: #ffffff;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+      text-align: left;
+      transition: background-color 0.3s ease;
+    }
+    
+    .App.dark-mode .note-item {
+      background-color: #444;
+      border-bottom: 1px solid #888;
+    }
+    
+    .note-item h2 {
+      margin: 0;
+      font-size: 1.2em;
+      color: #007bff;
+    }
+    
+    .App.dark-mode .note-item h2 {
+      color: #ff9800;
+    }
+    
+    .note-item p {
+      margin: 5px 0;
+      color: #555;
+      text-align: left;
+    }
+    
+    .App.dark-mode .note-item p {
+      color: #ccc;
+    }
+    
+    .note-item .category {
+      font-size: 0.9em;
+      color: #888;
+      margin-top: 5px;
+    }
+    
+    .App.dark-mode .note-item .category {
+      color: #bbb;
+    }
+    
+    .note-item .reminder {
+      font-size: 0.9em;
+      color: #888;
+      margin-top: 5px;
+    }
+    
+    .App.dark-mode .note-item .reminder {
+      color: #bbb;
+    }
+    
+    .note-item button {
+      margin-top: 10px;
+      margin-right: 10px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    
+    .note-item button.edit {
+      background-color: #4CAF50;
+    }
+    
+    .note-item button.edit:hover {
+      background-color: #45a049;
+      transform: scale(1.05);
+    }
+    
+    .note-item button.delete {
+      background-color: #dc3545;
+    }
+    
+    .note-item button.delete:hover {
+      background-color: #c82333;
+      transform: scale(1.05);
+    }
+    
+    .note-item button.archive {
+      background-color: #ff9800;
+    }
+    
+    .note-item button.archive:hover {
+      background-color: #e68900;
+      transform: scale(1.05);
+    }
+    
+    .search-bar {
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+    }
+    
+    .search-bar input {
+      width: calc(100% - 20px);
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+      background-color: #ffffff;
+      box-sizing: border-box;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .App.dark-mode .search-bar input {
+      background-color: #555;
+      color: #fff;
+      border: 1px solid #888;
+    }
+    
+    .search-bar input:focus {
+      border-color: #007bff;
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+    
+    .App.dark-mode .search-bar input:focus {
+      border-color: #ff9800;
+      box-shadow: 0 0 5px rgba(255, 152, 0, 0.5);
+    }
+    
+    p {
+      color: #777;
+      text-align: center;
+    }
+    
+    .App.dark-mode p {
+      color: #ccc;
+    }
+    
+    .char-limit {
+      font-size: 0.8em;
+      color: #888;
+      text-align: left;
+      margin: 0;
+    }
+    
+    .App.dark-mode .char-limit {
+      color: #bbb;
+    }
+    
+    .form-button-container {
+      display: flex;
+      justify-content: center;
+    }
+    
+    @media (max-width: 768px) {
+      .App {
+        padding: 10px;
+      }
+    
+      .App-header {
+        flex-direction: column;
+      }
+    
+      .App-icon {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    
+      button {
+        width: 100%;
+        align-self: center;
+      }
+    
+      .search-bar input {
+        width: 100%;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 1.5em;
+      }
+    
+      h2 {
+        font-size: 1.2em;
+      }
+    
+      input[type="text"],
+      textarea,
+      select,
+      input[type="datetime-local"] {
+        font-size: 14px;
+      }
+    
+      button {
+        font-size: 14px;
+      }
+    }
+
+    /* Bismillah Bintang 5 */
